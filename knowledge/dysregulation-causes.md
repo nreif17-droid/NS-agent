@@ -40,6 +40,26 @@ The relationship runs both ways: sympathetic activation raises blood glucose (vi
 ### 1.8 Isolation — 🟢
 John Cacioppo's evolutionary theory of loneliness: perceived social isolation triggers a biological threat response that's adaptive short-term (heightened vigilance) but maladaptive when sustained — chronic loneliness produces stress-hormone, immune, and cardiovascular effects comparable in scale to smoking or obesity as mortality risk factors, per Cacioppo's synthesis. This is one of the more robust cause categories in this file, replicated across brain imaging, immune, and behavioral measures. 🟢 ([Nature Neuropsychopharmacology systematic review](https://www.nature.com/articles/s41386-021-01058-7), [PMC4391342](https://pmc.ncbi.nlm.nih.gov/articles/PMC4391342/))
 
+### 1.9 Nicotine and cannabis (THC) tapering / withdrawal — 🟢 added 2026-08-05, closing the gap flagged in the first `/ns-check-in` log entry
+
+Two distinct substances, two distinct mechanisms — don't conflate them.
+
+**Nicotine — active use is the sympathetic/HPA activator; withdrawal is the drop-off.**
+- *Mechanism of use:* Nicotine binds nicotinic acetylcholine receptors on sympathetic nerve endings and the adrenal medulla, directly triggering catecholamine release — it's a direct pharmacological sympathetic activator, not just a "stimulant" in the loose sense. Chronic use shifts resting autonomic balance toward sympathetic dominance via a positive-feedback loop with oxidative stress. 🟢 ([sympathetic neurotransmission mechanism — PubMed](https://pubmed.ncbi.nlm.nih.gov/9110108/), [autonomic/hormonal effects of nicotine delivery — MDPI](https://www.mdpi.com/2227-9059/10/1/121))
+- *Mechanism of use, HPA axis:* Smoking acutely activates the HPA axis — cortisol spikes within about an hour of use — so a habitual user is cycling HPA activation throughout the day, independent of any other stressor. 🟢 ([endocrine effects of nicotine — PMC3389568](https://pmc.ncbi.nlm.nih.gov/articles/PMC3389568/))
+- *Withdrawal:* Symptoms (anxiety, restlessness, irritability, difficulty concentrating, sleep disruption, craving) begin within hours, peak 24–48h, and last ~4 weeks on average. Cortisol *drops* during this window as the HPA axis's sensitivity resets, and that drop itself is associated with more withdrawal distress and craving — a genuine physiological low, not just "willpower." Cortisol/catecholamines typically normalize within 2–4 weeks. 🟢 ([nicotine withdrawal and relapse — ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0376871603003089), [HPA subsensitivity during withdrawal, animal model — ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0306453003000246))
+- *Headache, mechanism:* Nicotine is a vasoconstrictor; chronic use sensitizes blood vessels to dilate more readily, and on cessation the rebound vasodilation produces a headache via essentially the same mechanism as caffeine-withdrawal headache. **This directly matches what showed up in the first log entry** — a nicotine-attributed headache during tapering is mechanistically well-supported, not a stretch. 🟢 ([Cleveland Clinic — nicotine headache](https://my.clevelandclinic.org/health/diseases/21813-nicotine-headache))
+- **Disagreement/complication worth flagging:** caffeine and nicotine interact. In abstinent smokers, blood caffeine levels rise and stay elevated for months at the same intake, because nicotine normally speeds caffeine metabolism — meaning some "nicotine withdrawal" symptoms in people who keep their coffee intake constant may actually be partial caffeine-toxicity symptoms layered on top. Worth tracking coffee intake alongside nicotine tapering rather than assuming all symptoms trace to one substance. 🟡 ([caffeine/nicotine interaction review](https://scholarsrepository.llu.edu/etd/920/))
+
+**Cannabis (THC) — roughly the inverse shape: use blunts stress reactivity; withdrawal is the rebound.**
+- *Mechanism of use:* The endocannabinoid system (CB1/CB2 receptors, anandamide/2-AG) directly regulates the HPA axis. Acute THC use raises cortisol in occasional users, but in frequent/dependent users, ACTH and cortisol reactivity to acute stress becomes *blunted* relative to non-users — chronic use appears to down-train the stress-response system's sensitivity, which is part of why cannabis "feels" stress-relieving in the moment even as some literature challenges whether that's genuinely adaptive coping. 🟢 ([Marijuana and HPA axis functioning — PMC6174415](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6174415/), [challenging the "cannabis as effective coping" framing — Frontiers](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.687106/full))
+- *Withdrawal — DSM-5 recognized syndrome, not fringe:* Cannabis Withdrawal Syndrome is a real, DSM-5-coded diagnosis (≥3 of 7 symptoms: irritability/anger, nervousness/anxiety, sleep disruption, decreased appetite, restlessness, depressed mood, physical symptoms — headache, sweating, shakiness, abdominal pain). Onset 24–48h, peaks days 2–6, mostly resolves in 1–2 weeks, though sleep disruption specifically can persist 30–45 days and is the symptom most associated with relapse. 🟢 ([DSM-5 criteria + symptom prevalence meta-analysis — JAMA Network Open](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2764234))
+- *Prevalence, for calibration:* meta-analysis puts withdrawal-symptom prevalence at ~47% pooled across regular/dependent users (17% in general population samples, up to 87% in inpatient samples) — so it's common among regular users, not universal, and dose/frequency-dependent. 🟢 (same source)
+
+**Safety framing — where this sits relative to the standing safety-flag list:** Neither nicotine nor cannabis withdrawal is classified as medically dangerous — both are grouped with "uncomfortable but not fatal" withdrawals in the addiction-medicine literature, in direct contrast to alcohol or benzodiazepine withdrawal, which carry real seizure/mortality risk and require medical supervision. 🟢 ([withdrawal-risk comparison](https://recovery.com/resources/can-withdrawal-kill-you/)) **This agent's stance:** routine nicotine/cannabis tapering does not itself trigger the safety-flag redirect — but if someone reports symptoms escalating beyond the documented pattern above (e.g., anything suggesting seizure, or co-occurring alcohol/benzodiazepine dependence), that's a different substance-risk profile and should route to the standing safety flag, not be treated as routine tapering.
+
+**What this means for `/ns-check-in` going forward:** nicotine and cannabis tapering are now legitimate, cited entries in this cause list — cross-reference intake context against this section the same way as any other §1 cause, including the specific symptom-timeline data above for calibrating whether a given symptom (e.g., headache, irritability, sleep disruption) is on-pattern for the tapering timeline or worth a closer look.
+
 ## 2. Effects
 
 | Effect | Mechanism (best-supported) | Evidence quality |
@@ -57,6 +77,7 @@ John Cacioppo's evolutionary theory of loneliness: perceived social isolation tr
 - 🔴 **Polyvagal Theory's specific neuroanatomical mechanism** — contested; usable as descriptive vocabulary only, not as validated mechanism (see `foundations.md`).
 - 🟡 **Sleep deprivation → elevated resting cortisol** — popular claim, weak/null in meta-analysis. Better-supported claim: sleep deprivation alters stress *reactivity*, not necessarily resting cortisol.
 - 🟡 **"Overstimulation" as an independent dysregulation cause** — plausible via known stress mechanisms, but thin direct evidence in general (non-clinical) populations.
+- 🟡 **Caffeine/nicotine interaction during nicotine tapering** — plasma caffeine can stay elevated for months post-cessation at unchanged intake, meaning some attributed "nicotine withdrawal" symptoms may be partial caffeine effects; worth tracking coffee intake alongside nicotine tapering, not a settled decomposition of symptoms.
 
 ## Sources consulted (dysregulation-causes)
 
@@ -73,5 +94,16 @@ John Cacioppo's evolutionary theory of loneliness: perceived social isolation tr
 - [Neurobiology of loneliness — systematic review, Nature Neuropsychopharmacology](https://www.nature.com/articles/s41386-021-01058-7)
 - [Loneliness: clinical import and interventions — PMC4391342](https://pmc.ncbi.nlm.nih.gov/articles/PMC4391342/)
 - [Gut microbiota, IBS, anxiety mechanisms — Frontiers narrative review](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1695321/full)
+- [Nicotine and sympathetic neurotransmission — PubMed](https://pubmed.ncbi.nlm.nih.gov/9110108/)
+- [Influence of nicotine delivery on autonomic and hormonal systems — MDPI](https://www.mdpi.com/2227-9059/10/1/121)
+- [Endocrine effects of nicotine and cigarette smoke — PMC3389568](https://pmc.ncbi.nlm.nih.gov/articles/PMC3389568/)
+- [Smoking abstinence, cortisol, and relapse — ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0376871603003089)
+- [Nicotine withdrawal and HPA subsensitivity, animal model — ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0306453003000246)
+- [Nicotine headache mechanism — Cleveland Clinic](https://my.clevelandclinic.org/health/diseases/21813-nicotine-headache)
+- [Caffeine/nicotine combined-use review](https://scholarsrepository.llu.edu/etd/920/)
+- [Marijuana use and HPA axis functioning — PMC6174415](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6174415/)
+- [Cannabis use and stress-response regulation — Frontiers](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.687106/full)
+- [Cannabis withdrawal syndrome prevalence, DSM-5 criteria — JAMA Network Open meta-analysis](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2764234)
+- [Withdrawal mortality risk comparison across substances](https://recovery.com/resources/can-withdrawal-kill-you/)
 
-*Last research pass: 2026-08-05.*
+*Last research pass: 2026-08-05 (initial); 2026-08-05 (nicotine/cannabis tapering addition, §1.9).*

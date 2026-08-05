@@ -63,6 +63,7 @@ Every knowledge file ends with a **Sources consulted** list and, where relevant,
 - **"Earthing"/electron-transfer grounding** — excluded from protocols as pseudoscience-adjacent; distinguished from legitimate attentional/sensory grounding, which is retained.
 - **Breath-hold / cyclic hyperventilation work** — real, documented safety risk (shallow water blackout), not just a fringe worry. Hard safety language is mandatory wherever this protocol appears.
 - **Fasted-state training** — evidence is duration-dependent and mixed, not the clean "fasting = calming" story often marketed.
+- **Nicotine/cannabis tapering** (added 2026-08-05, `dysregulation-causes.md` §1.9) — nicotine withdrawal cortisol drop and rebound-vasodilation headache are well-documented mechanisms; Cannabis Withdrawal Syndrome is a real DSM-5-coded diagnosis, not a fringe claim. Both are explicitly non-fatal withdrawals per addiction-medicine literature, in contrast to alcohol/benzodiazepine withdrawal — that contrast is stated directly so tapering isn't over- or under-flagged by the safety screen.
 
 ## Usage
 
