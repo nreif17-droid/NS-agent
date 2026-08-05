@@ -2,9 +2,9 @@
 
 This directory holds the cumulative, growing log of real trial runs: state going in → protocol used → outcome. This is what lets the agent get more personalized and precise over time (per the original design decision) — it's a *personal dataset*, not documentation.
 
-**Currently empty.** No trial-run entries exist yet because the CLI that produces them hasn't been built (see `/cli/DESIGN-PROPOSAL.md`). Nothing in this directory should be fabricated or backfilled — entries only get written by actual use.
+**Currently empty.** The CLI (`/ns-check-in`, see `/cli/README.md`) writes entries here as it's actually used — nothing in this directory should be fabricated or backfilled ahead of real use.
 
-## Format (proposed, pending CLI-design confirmation)
+## Format
 
 Each entry should capture, at minimum:
 - Timestamp
@@ -14,4 +14,4 @@ Each entry should capture, at minimum:
 - Protocol(s) selected (tier + specific protocol name, tying back to `/knowledge/protocols-*.md`)
 - Outcome (self-reported, structured — exact fields TBD in the CLI design proposal)
 
-Exact file format (one file per entry vs. append-only log vs. structured DB) is a CLI design decision — see `cli/DESIGN-PROPOSAL.md` §3 for the proposal and open questions.
+Confirmed format: one markdown file per entry (YAML front-matter + optional narrative), under `logs/<user_id>/<ISO-8601 timestamp>.md`, written by `/ns-check-in`. See `cli/README.md` and `.claude/commands/ns-check-in.md` for the exact write logic.

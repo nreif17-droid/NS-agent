@@ -1,6 +1,13 @@
 # CLI Design Proposal — Nervous System Optimization Agent
 
-**Status: proposal only. Nothing below is built.** This is here for you to confirm or redirect before any code/skill file gets written, per the brief.
+**Status: confirmed and built (2026-08-05).** All five open decisions below were confirmed as the recommended option in each case. The built tool is `.claude/commands/ns-check-in.md` — see `cli/README.md` for how to use it. This file is kept as the design record.
+
+**Decisions locked in:**
+1. Claude Code skill (slash command), not a standalone script
+2. Safety screen: Claude judgment against the `README.md` flag list, not a fixed keyword list
+3. Terminal-only output, no separate export file
+4. Outcome capture: passive follow-up only (asks about the most recent unresolved entry at the start of the next check-in)
+5. Data model: `logs/<user_id>/` directory + `user_id` field, no auth — sufficient for now
 
 ## 0. What kind of "CLI" this actually is
 

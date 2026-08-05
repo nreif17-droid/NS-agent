@@ -2,7 +2,7 @@
 
 A personal agent (built for Claude Code) that helps regulate and optimize the nervous system — in the moment and over time. Takes a free-text current-state input and returns immediate regulation cues, a short-term plan, and where that fits in a longer-term arc.
 
-**Status:** knowledge base built and research-complete for this pass. CLI is not yet built — see `cli/DESIGN-PROPOSAL.md` for the proposed design, pending your confirmation before any code is written.
+**Status:** knowledge base built and research-complete for this pass. CLI is built as a Claude Code slash command — see `cli/README.md` for usage, run it as `/ns-check-in`.
 
 ## What this is
 
@@ -38,9 +38,13 @@ When any of these appear in an intake, the response routes to "this is outside w
   regularization-procedure.md  default dysregulated -> baseline sequence (original synthesis)
   optimization-procedure.md    default baseline -> high-performance sequence (original synthesis)
 /logs/                         cumulative personal trial-run entries (state in -> protocol -> outcome)
-  README.md                    log format spec (empty until real trials are logged)
-/cli/                          the actual tool/script (not yet built)
-  DESIGN-PROPOSAL.md           proposed intake/output/logs design, pending confirmation
+  README.md                    log format spec
+  <user_id>/*.md                one file per check-in, written by /ns-check-in
+/cli/                          the built tool + its design record
+  README.md                    how to use /ns-check-in
+  DESIGN-PROPOSAL.md           original proposal + the 5 decisions confirmed
+.claude/commands/
+  ns-check-in.md               the actual slash command Claude Code runs
 README.md                      this file
 ```
 
@@ -60,6 +64,10 @@ Every knowledge file ends with a **Sources consulted** list and, where relevant,
 - **Breath-hold / cyclic hyperventilation work** — real, documented safety risk (shallow water blackout), not just a fringe worry. Hard safety language is mandatory wherever this protocol appears.
 - **Fasted-state training** — evidence is duration-dependent and mixed, not the clean "fasting = calming" story often marketed.
 
-## Next step
+## Usage
 
-See `cli/DESIGN-PROPOSAL.md` for the proposed intake structure, output format, and log-reading design — nothing there has been built yet.
+```
+/ns-check-in
+```
+
+See `cli/README.md` for arguments (user_id, optimize mode) and what each run does.
