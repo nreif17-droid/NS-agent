@@ -72,3 +72,17 @@ Every knowledge file ends with a **Sources consulted** list and, where relevant,
 ```
 
 See `cli/README.md` for arguments (user_id, optimize mode) and what each run does.
+
+## Roadmap: staged scope, not a straight line to "public app"
+
+Discussed 2026-08-05. Three stages, each with a materially different bar to clear — recorded here so the jump between them doesn't get papered over later:
+
+1. **Personal use (current stage).** You, `logs/self/`, no auth, no compliance surface. This is where the tool lives now and where it should keep getting used and refined.
+2. **Coaching clients (if the Sedona practice reactivates).** The data model is already separable (`logs/<user_id>/`) for this reason. The real difference at this stage isn't code — it's that **a professional stays in the loop making the actual calls**, using this as a tool alongside their own judgment, not as an autonomous decision-maker. This is the natural next proving ground: real people, but a small number, with a human backstop.
+3. **General-population app.** Explicitly *not* the current target, and not a natural next step from stage 2 without deliberate work. The gap is not "more code" — it's:
+   - **The hard safety rule must get stricter, not looser, to go here.** "Never diagnose" (see above) is what keeps this in the same regulatory category as wellness apps (Calm, Headspace) instead of the category digital-therapeutics products occupy (FDA-adjacent clearance, clinical trials, compliance infrastructure — see Woebot, Wysa as reference points for what that actually costs).
+   - **The safety screen can't stay "Claude's judgment reading free text" at that scale.** Fine for personal use where you know the context; not sufficient for a stranger's genuine emergency. Would need real clinical backing behind the flag logic, not just cited research.
+   - **The logs become regulated health data at that volume.** A markdown file in a private repo is nothing; thousands of people's panic/anxiety histories is the kind of data HIPAA/GDPR-type obligations exist for.
+   - **Liability shifts** once the software — not a professional — is the thing making the call for a stranger.
+
+Nothing built so far is wrong for stage 3 if it's ever pursued seriously — the non-diagnostic core and separable data model are the right foundation either way. But stage 3 needs legal/clinical infrastructure this project doesn't have and isn't currently building toward. Skipping stage 2 and jumping straight to stage 3 is the failure mode to avoid.
