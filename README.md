@@ -37,6 +37,7 @@ When any of these appear in an intake, the response routes to "this is outside w
   protocols-advanced.md        optimization-tier (cold/heat, HRV training, breath-hold, fasting)
   regularization-procedure.md  default dysregulated -> baseline sequence (original synthesis)
   optimization-procedure.md    default baseline -> high-performance sequence (original synthesis)
+  craving-management.md        craving/urge mechanism, distinct from ANS dysregulation (added 2026-08-06)
 /logs/                         cumulative personal trial-run entries (state in -> protocol -> outcome)
   README.md                    log format spec
   <user_id>/*.md                one file per check-in, written by /ns-check-in
@@ -64,6 +65,8 @@ Every knowledge file ends with a **Sources consulted** list and, where relevant,
 - **Breath-hold / cyclic hyperventilation work** — real, documented safety risk (shallow water blackout), not just a fringe worry. Hard safety language is mandatory wherever this protocol appears.
 - **Fasted-state training** — evidence is duration-dependent and mixed, not the clean "fasting = calming" story often marketed.
 - **Nicotine/cannabis tapering** (added 2026-08-05, `dysregulation-causes.md` §1.9) — nicotine withdrawal cortisol drop and rebound-vasodilation headache are well-documented mechanisms; Cannabis Withdrawal Syndrome is a real DSM-5-coded diagnosis, not a fringe claim. Both are explicitly non-fatal withdrawals per addiction-medicine literature, in contrast to alcohol/benzodiazepine withdrawal — that contrast is stated directly so tapering isn't over- or under-flagged by the safety screen.
+- **"A craving lasts exactly N minutes"** (`craving-management.md`, added 2026-08-06) — widely repeated specific-duration claim traces to commercial rehab-marketing content in this pass, not primary research. What's actually sourced is the *shape* (rises and falls) not a specific countdown.
+- **Incubation of craving** (`craving-management.md`) — cue-triggered craving can measurably *increase*, not just fade, over the first weeks-to-months of abstinence for several substances — a real, counter-intuitive, well-evidenced finding, stated directly so an upswing isn't mistaken for reversal.
 
 ## Usage
 

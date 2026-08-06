@@ -49,6 +49,7 @@ Read whichever of these are relevant to the intake:
 - `knowledge/protocols-advanced.md`, `knowledge/optimization-procedure.md` (optimize mode, gate permitting)
 - `knowledge/regularization-procedure.md` (check-in mode, always — it's the default sequencing logic)
 - `knowledge/dysregulation-causes.md` (whenever context suggests a specific cause, or duration is days/weeks+)
+- `knowledge/craving-management.md` (whenever the intake describes a craving/urge for a substance, especially one not clearly tied to situational stress — this is a distinct mechanism from general ANS dysregulation; don't reach for `protocols-generic.md`/`protocols-basic.md` breath-and-grounding tools alone if craving is the actual driver, use the urge-surfing sequence in this file instead or alongside)
 
 Then read `logs/<user_id>/` history (as many recent entries as reasonably fit — aim for the last 10–15):
 - Note **recurring context/cause matches** against `dysregulation-causes.md` categories — this is what should trigger regularization Stage 3 (causal escalation) instead of just repeating Stage 1 tools.
