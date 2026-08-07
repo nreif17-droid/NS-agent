@@ -43,6 +43,9 @@ Parse this structure out of the markdown files' existing citations and evidence-
 4. **Log write.** Every check-in (including safety-flagged ones, minus generated protocol) is saved to the user's history.
 5. **Passive follow-up.** Next check-in opens by asking about the most recent unresolved logged outcome, same as the CLI version — this is a core mechanic, not a nice-to-have.
 6. **History view.** User can browse past entries, see patterns the app has surfaced (recurring causes, frequency), and see their own "personal baseline" once enough entries exist.
+7. **Proactive check-ins (new for the app, not in the CLI version).** Scheduled reminders ("how are you doing?") on a user-configurable cadence — this is what turns the tool into a maintenance habit rather than a crisis-only button. User controls frequency/timing/channel (push, email); default to opt-in, not a pre-set aggressive cadence — unwanted notifications are themselves a small stressor, which directly undercuts the product's purpose.
+8. **Pattern-flagging, surfaced visibly.** Once enough entries exist, the app should actively tell the user what it's noticed — a recurring cause, a time-of-day pattern, a specific trigger category — not just passively store it for them to infer. This is the same mechanic as `regularization-procedure.md` Stage 3, made visible as a real feature (e.g., a "patterns" or "insights" view), not just a backend log.
+9. **Outcome-ranked tool matching.** Once a user has enough logged outcomes, weight recommendations toward what has *actually worked for them* in similar past states, ahead of the generic default ordering. Requires real outcome data — don't fake a "personalized for you" label before there's data behind it; show the generic evidence-based default until personalization has something real to work with, and say so.
 
 ## 3. Copywriting direction
 
@@ -94,6 +97,12 @@ LogEntry {
 - Should be a hybrid: an LLM judgment pass against a maintained flag-criteria list (see `README.md`'s hard safety rule for the starting list), PLUS hardcoded fallback resources (crisis line numbers, "find a therapist" links) that display regardless of the LLM's specific read — never let a single model call be the only thing standing between a real emergency and a redirect
 - Log every safety-flag trigger (anonymized/aggregated is fine) so the flag criteria can be reviewed and improved over time — this is infrastructure work, budget real time for it, don't treat it as "one prompt and done"
 
+**Alcohol-specific screening gate — a distinct, mandatory sub-component if any drinking-related feature or copy exists anywhere in the product:**
+- Per `knowledge/substance-safety-screening.md`: implement AUDIT-C (validated 3-question screen, scored 0–12, positive at ≥4 men/≥3 women) as an actual onboarding gate before any alcohol-reduction content is shown — this is a known, validated instrument, do not improvise a substitute.
+- AUDIT-C positive, OR self-reported heavy/daily use, OR any history of withdrawal seizures/delirium tremens → hard route to "talk to a doctor before stopping or cutting back," same visual/UX treatment as the general safety-flag screen (§4), not folded quietly into onboarding as a checkbox.
+- Nicotine and cannabis do not require this gate — the app can support self-directed tapering for those directly, per the existing knowledge base. Alcohol is different specifically because withdrawal can be fatal (delirium tremens: 1–4% mortality even treated); do not build a unified "quit any habit" flow that treats all three the same way.
+- This gate is required starting with the very first version that mentions alcohol at all — it is not deferrable to a later milestone.
+
 **Auth/privacy — real requirements starting the moment a second real user exists (Stage B), not deferred to some future "scale" milestone:**
 - Encrypt log data at rest — this is sensitive personal health-adjacent data (substance use, mental state) even for a small user base
 - User-facing data export and full deletion, not just account deactivation
@@ -108,7 +117,8 @@ LogEntry {
 2. **The safety screen is real infrastructure**, per §5 — not a single LLM call with no fallback.
 3. **Every protocol recommendation displays its evidence rating and source inline** — this is the product, not an appendix.
 4. **Privacy requirements apply from the first real user**, not deferred to some later "scale" milestone.
-5. **If a requested feature would violate any of the above, flag it and ask rather than building it anyway.**
+5. **Alcohol gets its own AUDIT-C-based gate, from the first version that touches it at all** — never treated as equivalent-risk to nicotine/cannabis tapering. See §5.
+6. **If a requested feature would violate any of the above, flag it and ask rather than building it anyway.**
 
 ## 7. Acceptance checklist before calling any milestone "done"
 
@@ -119,6 +129,9 @@ LogEntry {
 - [ ] Log data is encrypted at rest; user can export and fully delete their data
 - [ ] No ad-tech/third-party analytics has access to log content
 - [ ] Onboarding explains the non-diagnostic framing before first check-in, not after
+- [ ] If any alcohol-related feature/copy exists: AUDIT-C gate is implemented and blocks self-regulation content on a positive screen, heavy/daily use report, or withdrawal-seizure/DT history
+- [ ] Proactive check-in reminders are opt-in and user-configurable, not a default aggressive push cadence
+- [ ] Personalized/outcome-ranked recommendations are only labeled "personalized" once real outcome data backs them — generic evidence-based defaults show otherwise
 
 ---
 

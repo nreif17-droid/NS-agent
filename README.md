@@ -23,6 +23,7 @@ This agent must **never claim a clinical diagnosis**, and must **flag — not at
 - Disordered-eating indicators (relevant before suggesting fasting protocols)
 - Panic-disorder history (relevant before suggesting breath-hold/hyperventilation protocols)
 - Cardiovascular conditions (relevant before suggesting cold/heat exposure protocols)
+- **Alcohol dependence indicators** (AUDIT-C positive, heavy/daily use, or any history of withdrawal seizures/delirium tremens — see `knowledge/substance-safety-screening.md`): route to medical supervision before any drinking-reduction support, unlike nicotine/cannabis tapering, which this tool can support directly
 
 When any of these appear in an intake, the response routes to "this is outside what this tool does — see a doctor/therapist" instead of generating a protocol. This rule is referenced throughout `/knowledge/` and must be enforced at the CLI/prompt level once built, not left as documentation only.
 
@@ -38,6 +39,7 @@ When any of these appear in an intake, the response routes to "this is outside w
   regularization-procedure.md  default dysregulated -> baseline sequence (original synthesis)
   optimization-procedure.md    default baseline -> high-performance sequence (original synthesis)
   craving-management.md        craving/urge mechanism, distinct from ANS dysregulation (added 2026-08-06)
+  substance-safety-screening.md  alcohol/benzo withdrawal risk gate - AUDIT-C, CIWA-Ar (added 2026-08-06)
 /logs/                         cumulative personal trial-run entries (state in -> protocol -> outcome)
   README.md                    log format spec
   <user_id>/*.md                one file per check-in, written by /ns-check-in
@@ -67,6 +69,7 @@ Every knowledge file ends with a **Sources consulted** list and, where relevant,
 - **Nicotine/cannabis tapering** (added 2026-08-05, `dysregulation-causes.md` §1.9) — nicotine withdrawal cortisol drop and rebound-vasodilation headache are well-documented mechanisms; Cannabis Withdrawal Syndrome is a real DSM-5-coded diagnosis, not a fringe claim. Both are explicitly non-fatal withdrawals per addiction-medicine literature, in contrast to alcohol/benzodiazepine withdrawal — that contrast is stated directly so tapering isn't over- or under-flagged by the safety screen.
 - **"A craving lasts exactly N minutes"** (`craving-management.md`, added 2026-08-06) — widely repeated specific-duration claim traces to commercial rehab-marketing content in this pass, not primary research. What's actually sourced is the *shape* (rises and falls) not a specific countdown.
 - **Incubation of craving** (`craving-management.md`) — cue-triggered craving can measurably *increase*, not just fade, over the first weeks-to-months of abstinence for several substances — a real, counter-intuitive, well-evidenced finding, stated directly so an upswing isn't mistaken for reversal.
+- **Alcohol withdrawal is categorically more dangerous than nicotine/cannabis** (`substance-safety-screening.md`, added 2026-08-06) — seizure risk (~3%) peaks 12–24h post-last-drink, delirium tremens (~5% of cases) carries 1–4% mortality even treated, up to 15% untreated. This is not a nuance to soften for marketing purposes — see the operational gating rule in that file before building or marketing any alcohol-related feature.
 
 ## Usage
 
