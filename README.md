@@ -90,4 +90,4 @@ Discussed 2026-08-05. Three stages, each with a materially different bar to clea
 
 Nothing built so far is wrong for stage 3 if it's ever pursued seriously — the non-diagnostic core and separable data model are the right foundation either way. But stage 3 needs legal/clinical infrastructure this project doesn't have and isn't currently building toward. Skipping stage 2 and jumping straight to stage 3 is the failure mode to avoid.
 
-**See `product/DIRECTIVE.md`** for the compiled marketing/product-build brief (added 2026-08-06) — written to be handed to whoever executes next (marketer, developer, another AI session), with the same non-negotiables restated so they travel with the document.
+**See `product/DIRECTIVE.md`** for the compiled marketing/product-build brief (added 2026-08-06) — written to be handed to whoever executes next (marketer, developer, another AI session), with the same non-negotiables restated so they travel with the document. **See `product/BUILD-PROMPT.md`** for the companion execution prompt (copywriting, UI/design, technical architecture), written to be pasted directly into an AI app-building tool.

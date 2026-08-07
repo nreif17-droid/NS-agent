@@ -67,4 +67,6 @@ These are restated from `README.md`'s hard safety rule and Roadmap section — r
 
 Hand this whole file, plus `/knowledge/` and `README.md`, to whoever's executing next — designer, marketer, developer, or another AI session. It's written to be actionable on its own, but §6 is load-bearing: anyone building or marketing off this without reading it first is the failure mode this document exists to prevent.
 
+**For actually building the app:** see `product/BUILD-PROMPT.md` — a self-contained execution prompt for copywriting, UI/design, and technical architecture, meant to be pasted directly into an AI app-building tool (Lovable, v0, bolt.new, Replit Agent, etc.). This document is the strategy; that one is the build directive.
+
 *Compiled 2026-08-06 from the full project state at that point: `/knowledge/` (8 files), `/ns-check-in`, and two real logged check-ins.*
