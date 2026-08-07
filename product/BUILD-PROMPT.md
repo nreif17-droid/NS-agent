@@ -135,4 +135,4 @@ LogEntry {
 
 ---
 
-*Companion to `product/DIRECTIVE.md` (strategy/marketing brief) and the source knowledge base in `/knowledge/`. Compiled 2026-08-06.*
+*Companion to `product/DIRECTIVE.md` (strategy/marketing brief) and the source knowledge base in `/knowledge/`. Compiled 2026-08-06. See `product/APP-BUILDER-PROMPT.md` for the single, self-contained, paste-ready synthesis of this file plus DIRECTIVE.md plus the inlined protocol library — use that one if the builder tool can't read the rest of this repo.*
