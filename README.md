@@ -89,3 +89,5 @@ Discussed 2026-08-05. Three stages, each with a materially different bar to clea
    - **Liability shifts** once the software — not a professional — is the thing making the call for a stranger.
 
 Nothing built so far is wrong for stage 3 if it's ever pursued seriously — the non-diagnostic core and separable data model are the right foundation either way. But stage 3 needs legal/clinical infrastructure this project doesn't have and isn't currently building toward. Skipping stage 2 and jumping straight to stage 3 is the failure mode to avoid.
+
+**See `product/DIRECTIVE.md`** for the compiled marketing/product-build brief (added 2026-08-06) — written to be handed to whoever executes next (marketer, developer, another AI session), with the same non-negotiables restated so they travel with the document.
